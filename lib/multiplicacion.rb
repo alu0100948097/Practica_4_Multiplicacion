@@ -28,5 +28,10 @@ class Multiplicacion
         temp[temp.length-1]="0"
         return temp.join
     end
+    def XOR(a,b)
+        temp=a.unpack('C*').zip(b.unpack('C*'))
+        temp=temp.map {|x,y| x^y}.join
+        return temp
+    end
 end
 end
