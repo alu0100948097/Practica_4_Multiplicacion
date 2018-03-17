@@ -49,6 +49,30 @@ class Multiplicacion
         return temp
     end
     
+    def multiplicar
+        temp=[]
+        suma=[]
+        
+        for i in (0..@segundo.length-1)
+            if (@segundo[i]=="1")
+                temp.push(7-i)
+            end
+        end
+        
+        temp.reverse!
+        
+        for i in (0..temp.length-1)
+            suma.push(operacion(temp[i]))
+        end
+        
+        t=suma[0]
+        
+        for i in (1..suma.length-1)
+            t=XOR(t,suma[i])
+        end
+        
+        return t
+    end
     
 end
 end
