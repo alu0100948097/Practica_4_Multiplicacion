@@ -90,6 +90,7 @@ loop do
     puts "Seleccionar Algoritmo"
     puts "1: AES"
     puts "2: SNOW 3G"
+    puts "3: Modificación"
     print "Introduzca una opcion: "
     opcion = gets.chomp
     puts
@@ -102,6 +103,12 @@ loop do
         puts "Multiplicación: #{@test.multiplicar}"
         when '2'
         @test.algoritmo="A9"
+        puts "Primer byte: #{@test.primer}"
+        puts "Segundo byte: #{@test.segundo}"
+        puts "Byte Algoritmo: #{@test.algoritmo}"
+        puts "Multiplicación: #{@test.multiplicar}"
+        when '3'
+        @test.algoritmo="AF"
         puts "Primer byte: #{@test.primer}"
         puts "Segundo byte: #{@test.segundo}"
         puts "Byte Algoritmo: #{@test.algoritmo}"
